@@ -1,6 +1,6 @@
 # FastAPI Material Kit
 
-> Status: WIP
+> **DESIGN Repo**: https://github.com/creativetimofficial/material-kit
 
 <br />
 
@@ -18,10 +18,6 @@
 |     |         | Mutating requests (Create, UPD, DEL) (reserved for authenticated users) |
 | ❌ | **Docker** | Simple Setup (local usage) |
 | ❌ | **OAuth** | `Github` OAuth Provider |
-
-<br />
-
-> **DESIGN Repo**: https://github.com/creativetimofficial/material-kit
 
 <br />
 
