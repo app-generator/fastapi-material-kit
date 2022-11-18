@@ -18,6 +18,7 @@
 |     |         | Mutating requests (Create, UPD, DEL) (reserved for authenticated users) |
 | ❌ | **Docker** | Simple Setup (local usage) |
 | ❌ | **OAuth** | `Github` OAuth Provider |
+| ❌ | **Unitary tests** | `minimal suite` |
 
 <br />
 
