@@ -30,3 +30,9 @@
 **FastAPI Material Kit** - Open-source Starter provided by **[AppSeed](https://appseed.us/)**
 
 
+<!-- Building the App Manually -->
+
+1. create a virtual environment with `python -m venv venv`
+2. activate the virtual environment, likely `source venv/Scripts/active` 
+3. install the requirements `pip install -r requirements`
+4. uvicorn src.app:app
