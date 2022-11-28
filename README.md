@@ -28,3 +28,5 @@
 
 ---
 **FastAPI Material Kit** - Open-source Starter provided by **[AppSeed](https://appseed.us/)**
+
+

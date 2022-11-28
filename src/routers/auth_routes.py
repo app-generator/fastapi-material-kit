@@ -13,7 +13,6 @@ router = APIRouter(
 github_keys = {
     "secret_key"     : settings.github_secret_key,
     "client_id"     : settings.github_client_id,
-
 }
 
 @router.get("/github_login")
@@ -35,20 +34,20 @@ async def authorize_github(request: Request):
     github_authorize_url = f'https://github.com/login/oauth/access_token?client_id={settings.github_client_id}&client_secret={settings.github_secret_key}&code={authorization_code}' 
     get_user_url = "https://api.github.com/user"
     try:
-        http3client = http3.AsyncClient()
-        response = await http3client.get(github_authorize_url)
 
-        
-        # github_user_id = response['github_user_id']
-        # access_token = response['access_token']
+        # here is the main issue
+        # during a tsl call, i cannot start a request to.
+        # for stripe, this is done with their module.
+        # this is my attempt to do it manually        
+        http3client = http3.AsyncClient()
+        response = await http3client.post(github_authorize_url, authorization_code)
+
+        access_token = response['access_token']
 
         redirect = RedirectResponse(url=app.ui_router.url_path_for('index'))
         redirect.status_code = 302
         # redirect.set_cookie('github-Account', access_token)
-        # redirect.set_cookie('github-User-ID', github_user_id)
 
-
-        # print ('here')
         return redirect
     except Exception as e:
         print (e)
@@ -60,23 +59,14 @@ def deauthorize_github(request: Request):
     try:
         print (request)
         print (dir(request))
-        # github_user_id = request.cookies.get('github-User-ID')
-        # access_key = request.cookies.get('github-Account')
+        access_key = request.cookies.get('github-Account')
 
-        # if (not github_user_id or not access_key):
-        #     raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="You are not logged in")
-
-        # github.api_key = github_keys['secret_key']
-
-        # github.OAuth.deauthorize(
-        #     client_id=settings.github_client_id,
-        #     github_user_id=github_user_id
-        # )
+        if (not access_key):
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="You are not logged in")
 
         redirect = RedirectResponse(url=app.ui_router.url_path_for('index'))
         redirect.status_code = 302
         redirect.set_cookie('github-Account', '')
-        redirect.set_cookie('github-User-ID', '')
 
         return redirect
     except Exception as e:
