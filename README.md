@@ -36,3 +36,4 @@
 2. activate the virtual environment, likely `source venv/Scripts/active` 
 3. install the requirements `pip install -r requirements`
 4. uvicorn src.app:app
+
