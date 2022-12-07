@@ -11,6 +11,7 @@
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +33,9 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  
+  <!-- <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" /> -->
+  <link id="pagestyle" href="{{url_for('static', filename='')}}" rel="stylesheet" />
 </head>
 
 
@@ -41,3 +44,5 @@
 <!-- body tag is within content block -->
 {% block content %}{% endblock %}
 
+
+</html>
