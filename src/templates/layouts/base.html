@@ -42,8 +42,15 @@
 </head>
 
 
+{% if title=='Home' %}
+  {% include "includes/navigation.html" %}
+{% endif %}
 
-{% include "includes/navigation.html" %}
+{% if title=='Contact Us' %}
+{% endif %}
+
+
+
 
 <!-- body tag is within content block -->
 {% block content %}{% endblock %}
