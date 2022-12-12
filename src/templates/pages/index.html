@@ -4,10 +4,9 @@
 {% block content %}
 
 <body class="index-page bg-gray-200">
+{% include "navigation/navigation.html" %}
+{% include "includes/index-header.html" %}
 
-
-
-  
 <!-- <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12"> -->
 
 <!-- </div></div></div> -->
@@ -7091,32 +7090,6 @@
 
   
 
-  
-{% endblock %}
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- make sure to include plugins -->
-
-
-<!-- make sure to include parallax -->
-
-
-
-<!-- make sure to include google maps plugin -->
 
 
 
@@ -7125,7 +7098,7 @@
 <!--  Google Maps Plugin    -->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-<script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<script src="{{url_for('static', path='js/material-kit.js')}}" type="text/javascript"></script>
 
 <script type="text/javascript">
 
@@ -7159,3 +7132,7 @@
 
 </body>
 
+  
+{% endblock %}
+
+  
