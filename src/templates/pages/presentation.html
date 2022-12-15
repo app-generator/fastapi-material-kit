@@ -57,14 +57,14 @@
                   <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
                     Pages
-                    <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                    <img src="{{url_for('static', path='img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
                   </a>
                   <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
                     <div class="d-none d-lg-block">
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                         Landing Pages
                       </h6>
-                      <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                      <a href="{{url_for('about_us')}}" class="dropdown-item border-radius-md">
                         <span>About Us</span>
                       </a>
                       <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
@@ -84,7 +84,7 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                         Landing Pages
                       </h6>
-                      <a href="./pages/about-us.html" class="dropdown-item border-radius-md">
+                      <a href="{{url_for('about_us')}}" class="dropdown-item border-radius-md">
                         <span>About Us</span>
                       </a>
                       <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
@@ -106,7 +106,7 @@
                   <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="material-icons opacity-6 me-2 text-md">view_day</i>
                     Sections
-                    <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                    <img src="{{url_for('static', path='img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
                     <div class="d-none d-lg-block">
@@ -117,7 +117,7 @@
                               <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Page Sections</h6>
                               <span class="text-sm">See all sections</span>
                             </div>
-                            <img src="./assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            <img src="{{url_for('static', path='img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
                           </div>
                         </a>
                         <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -136,7 +136,7 @@
                               <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Navigation</h6>
                               <span class="text-sm">See all navigations</span>
                             </div>
-                            <img src="./assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            <img src="{{url_for('static', path='img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
                           </div>
                         </a>
                         <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -158,7 +158,7 @@
                               <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Input Areas</h6>
                               <span class="text-sm">See all input areas</span>
                             </div>
-                            <img src="./assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            <img src="{{url_for('static', path='img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
                           </div>
                         </a>
                         <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -177,7 +177,7 @@
                               <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Attention Catchers</h6>
                               <span class="text-sm">See all examples</span>
                             </div>
-                            <img src="./assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            <img src="{{url_for('static', path='img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
                           </div>
                         </a>
                         <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -199,7 +199,7 @@
                               <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Elements</h6>
                               <span class="text-sm">See all elements</span>
                             </div>
-                            <img src="./assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            <img src="{{url_for('static', path='img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
                           </div>
                         </a>
                         <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
@@ -344,7 +344,7 @@
                   <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="material-icons opacity-6 me-2 text-md">article</i>
                     Docs
-                    <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                    <img src="{{url_for('static', path='img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
                     <div class="d-none d-lg-block">
@@ -383,23 +383,23 @@
                     </div>
                     <div class="row d-lg-none">
                       <div class="col-md-12 g-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{url_for('about_us')}}">
                           <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Getting Started</h6>
                           <span class="text-sm">All about overview, quick start, license and contents</span>
                         </a>
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{url_for('about_us')}}">
                           <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Foundation</h6>
                           <span class="text-sm">See our colors, icons and typography</span>
                         </a>
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{url_for('about_us')}}">
                           <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Components</h6>
                           <span class="text-sm">Explore our collection of fully designed components</span>
                         </a>
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{url_for('about_us')}}">
                           <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Plugins</h6>
                           <span class="text-sm">Check how you can integrate our plugins</span>
                         </a>
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./pages/about-us.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{url_for('about_us')}}">
                           <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Utility Classes</h6>
                           <span class="text-sm">For those who want flexibility, use our utility classes</span>
                         </a>
@@ -1215,7 +1215,7 @@
           <div class="col-md-8">
             <div class="row mt-4">
               <div class="col-md-6">
-                <a href="./pages/about-us.html">
+                <a href="{{url_for('about_us')}}">
                   <div class="card move-on-hover">
                     <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/about-us.jpg" alt="aboutus">
                   </div>

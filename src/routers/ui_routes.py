@@ -3,7 +3,7 @@ from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
-import http3
+# import http3
 
 
 # from src import app
@@ -43,7 +43,12 @@ def author(request: Request, response_model=HTMLResponse):
 def sign_in(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/sign-in.html", {"request" : request, "title" : "Sign In"})
 
-@router.get("/template", status_code=status.HTTP_200_OK)
+# @router.get("/template", status_code=status.HTTP_200_OK)
+# def template(request: Request, response_model=HTMLResponse):
+#     return TEMPLATES.TemplateResponse("pages/template.html", {"request" : request, "title" : "Template"})
+
+
+@router.get("/presentation", status_code=status.HTTP_200_OK)
 def template(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/template.html", {"request" : request, "title" : "Template"})
+    return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request, "title" : "Presentation"})
 
