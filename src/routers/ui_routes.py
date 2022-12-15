@@ -49,6 +49,6 @@ def sign_in(request: Request, response_model=HTMLResponse):
 
 
 @router.get("/presentation", status_code=status.HTTP_200_OK)
-def template(request: Request, response_model=HTMLResponse):
+def presentation(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request, "title" : "Presentation"})
 
