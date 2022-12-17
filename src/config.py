@@ -1,10 +1,11 @@
 from pydantic import BaseSettings
+from secrets import token_hex
 
 class Settings(BaseSettings):
-    secret_key: str
-    algorithm: str
-    debugging: int
-    access_token_expire_minutes: int = 30
+    secret_key: str = token_hex(12)
+    algorithm: str = 'HS256'
+    debugging: bool = True
+    access_token_expire_minutes: int = 60*2 #2 hours
 
     github_secret_key: str = None
     github_is_active: bool = False

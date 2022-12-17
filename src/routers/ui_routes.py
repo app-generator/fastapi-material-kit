@@ -52,3 +52,8 @@ def sign_in(request: Request, response_model=HTMLResponse):
 def presentation(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request, "title" : "Presentation"})
 
+
+@router.get("/hero-sections", status_code=status.HTTP_200_OK)
+def presentation(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("page-sections/hero-sections.html", {"request" : request, "title" : "Presentation"})
+
