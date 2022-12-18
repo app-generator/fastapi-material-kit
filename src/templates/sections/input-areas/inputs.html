@@ -1,8 +1,41 @@
-{% extends 'layouts/base.html' %}
+<!--
+=========================================================
+* Material Kit 2 - v3.0.4
+=========================================================
 
-{% block content %}
+* Product Page: https://www.creative-tim.com/product/material-kit
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
 
-<body class="page-headers-sections">
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    Material Kit 2 by Creative Tim
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+</head>
+
+<body class="inputs-sections">
   <!-- Navbar Light -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container">
@@ -89,7 +122,7 @@
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/hero-sections.html">
                       Page Headers
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/features.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{url_for('features')}}">
                       Features
                     </a>
                   </div>
@@ -210,7 +243,7 @@
                   <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/hero-sections.html">
                     Page Headers
                   </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/features.html">
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{url_for('features')}}">
                     Features
                   </a>
                   <div class="d-flex mb-2 mt-3">
@@ -392,28 +425,28 @@
         <div class="mb-4 w-100 w-md-50 w-lg-25">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="https://demos.creative-tim.com/material-kit-pro/index">Page Sections</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Page Headers</li>
+              <li class="breadcrumb-item"><a href="https://demos.creative-tim.com/material-kit-pro/index">Input Areas</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Inputs</li>
             </ol>
           </nav>
-          <h3>Page Headers</h3>
+          <h3>Inputs</h3>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
             <div class="row justify-space-between py-2">
               <div class="col-lg-3 me-auto">
-                <p class="lead text-dark pt-1 mb-0">Header 1</p>
+                <p class="lead text-dark pt-1 mb-0">Input dynamic</p>
               </div>
               <div class="col-lg-3">
                 <div class="nav-wrapper position-relative end-0">
                   <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-header-1" role="tab" aria-selected="true">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-simple" role="tab" aria-selected="true">
                         <i class="fas fa-desktop text-sm me-2"></i> Preview
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-header-1" role="tab" aria-selected="false">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-simple" role="tab" aria-selected="false">
                         <i class="fas fa-code text-sm me-2"></i> Code
                       </a>
                     </li>
@@ -423,147 +456,46 @@
             </div>
           </div>
           <div class="tab-content tab-space">
-            <div class="tab-pane active" id="preview-header-1">
-              <iframe class="w-100 height-600" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <div class="tab-pane active" id="preview-input-simple">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
         <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
         <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
         <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
-        <!-- -------- START HEADER 1 w/ text and image on right ------- -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-absolute bg-transparent shadow-none">
-    <div class="container">
-      <a class="navbar-brand text-white" href="javascript:;">Material Design</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header-2" aria-controls="navbar-header-2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-header-2">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="javascript:;">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="javascript:;">
-              About Us
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="javascript:;">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="https://twitter.com/CreativeTim">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white mx-2" href="https://www.facebook.com/CreativeTim">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="https://www.instagram.com/CreativeTimOfficial">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
-    <span class="mask bg-gradient-dark opacity-5"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
-          <h1 class="text-white mb-4">Material Kit</h1>
-          <p class="text-white opacity-8 lead pe-5 me-5">The time is now for it be okay to be great. People in this world shun people for being nice. </p>
-          <div class="buttons">
-            <button type="button" class="btn btn-white mt-4">Get Started</button>
-            <button type="button" class="btn text-white shadow-none mt-4">Read more</button>
-          </div>
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <div class="input-group input-group-dynamic">
+          <label class="form-label">Regular</label>
+          <input type="text" class="form-control" >
         </div>
       </div>
     </div>
   </div>
-</header>
-<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+</section>
 
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
         '></iframe>
             </div>
-            <div class="tab-pane" id="code-header-1">
+            <div class="tab-pane" id="code-input-simple">
               <div class="position-relative p-4 pb-2">
                 <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
-                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- -------- START HEADER 1 w/ text and image on right ------- --&gt;</span>
-<span class="nt">&lt;header&gt;</span>
-  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-dark navbar-absolute bg-transparent shadow-none"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand text-white"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>Material Design<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbar-header-2"</span> <span class="na">aria-controls=</span><span class="s">"navbar-header-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"navbar-header-2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav mx-auto"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>
-              Home
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>
-              About Us
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white"</span> <span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>
-              Contact Us
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white"</span> <span class="na">href=</span><span class="s">"https://twitter.com/CreativeTim"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white mx-2"</span> <span class="na">href=</span><span class="s">"https://www.facebook.com/CreativeTim"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-facebook"</span><span class="nt">&gt;&lt;/i&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link text-white"</span> <span class="na">href=</span><span class="s">"https://www.instagram.com/CreativeTimOfficial"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-instagram"</span><span class="nt">&gt;&lt;/i&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/nav&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header min-vh-100"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80&amp;#39;);"</span> <span class="na">loading=</span><span class="s">"lazy"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mask bg-gradient-dark opacity-5"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6 col-md-7 d-flex justify-content-center flex-column"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-white mb-4"</span><span class="nt">&gt;</span>Material Kit<span class="nt">&lt;/h1&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-white opacity-8 lead pe-5 me-5"</span><span class="nt">&gt;</span>The time is now for it be okay to be great. People in this world shun people for being nice. <span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-white mt-4"</span><span class="nt">&gt;</span>Get Started<span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn text-white shadow-none mt-4"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/button&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-dynamic"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span><span class="nt">&gt;</span>Regular<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="nt">&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-<span class="c">&lt;!-- -------- END HEADER 1 w/ text and image on right ------- --&gt;</span></code></pre>
+<span class="nt">&lt;/section&gt;</span></code></pre>
                 </figure>
               </div>
             </div>
@@ -571,182 +503,409 @@
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 2</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input static</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-icon-label" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-icon-label" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-2.jpg" alt="header-2">
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-icon-label">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <div class="input-group input-group-static mb-4">
+          <label>First Name</label>
+          <input class="form-control" placeholder="eg. Thomas Shelby" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-icon-label">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-static mb-4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>First Name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"eg. Thomas Shelby"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 3</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input outline</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-outline" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-outline" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-3.jpg" alt="header-3">
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-outline">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <div class="input-group input-group-outline mb-4">
+          <label class="form-label">Outline</label>
+          <input class="form-control" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-outline">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-outline mb-4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span><span class="nt">&gt;</span>Outline<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 4</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input with icon</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-icon" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-icon" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-4.jpg" alt="header-4">
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-icon">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <div class="input-group input-group-dynamic mb-4">
+          <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
+          <input class="form-control" placeholder="Search" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-icon">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-dynamic mb-4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 5</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input success</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-success" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-success" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-5.jpg" alt="header-5">
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-success">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <input type="text" placeholder="Success" class="form-control is-valid" >
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-success">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Success"</span> <span class="na">class=</span><span class="s">"form-control is-valid"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 6</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input error</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-error" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-error" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-6.jpg" alt="header-6">
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-error">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <input type="text" placeholder="Error" class="form-control is-invalid" >
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-error">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Error"</span> <span class="na">class=</span><span class="s">"form-control is-invalid"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 7</p>
+            <div class="row justify-space-between py-2">
+              <div class="col-lg-3 me-auto">
+                <p class="lead text-dark pt-1 mb-0">Input disabled</p>
               </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-7.jpg" alt="header-7">
-          </div>
-        </div>
-        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-          <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 8</p>
-              </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+              <div class="col-lg-3">
+                <div class="nav-wrapper position-relative end-0">
+                  <ul class="nav nav-pills nav-fill flex-row p-1" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#preview-input-disabled" role="tab" aria-selected="true">
+                        <i class="fas fa-desktop text-sm me-2"></i> Preview
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#code-input-disabled" role="tab" aria-selected="false">
+                        <i class="fas fa-code text-sm me-2"></i> Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-8.jpg" alt="header-8">
-          </div>
-        </div>
-        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-          <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 9</p>
-              </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
+          <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-input-disabled">
+              <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+        <link id="pagestyle" href="https://demos.creative-tim.com/material-kit/assets/css/material-kit.min.css?v=3.0.4" rel="stylesheet" />
+        <section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <input type="text" placeholder="Disabled" class="form-control"  disabled>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+        '></iframe>
+            </div>
+            <div class="tab-pane" id="code-input-disabled">
+              <div class="position-relative p-4 pb-2">
+                <a class="btn btn-sm bg-gradient-dark position-absolute end-4 mt-3" onclick="copyCode(this);" href="javascript:;"><i class="fas fa-copy text-sm me-1"></i> Copy</a>
+                <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"py-7"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-space-between py-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-4 mx-auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled"</span> <span class="na">class=</span><span class="s">"form-control"</span>  <span class="na">disabled</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre>
+                </figure>
               </div>
             </div>
-          </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-9.jpg" alt="header-9">
-          </div>
-        </div>
-        <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
-          <div class="container border-bottom">
-            <div class="row py-3">
-              <div class="col-lg-4 text-start">
-                <p class="lead text-dark pt-1 mb-0">Header 10</p>
-              </div>
-              <div class="col-lg-4 mt-1 text-center">
-                <span class="badge bg-light text-dark"><i class="fas fa-lock me-1" aria-hidden="true"></i> Screenshot</span>
-              </div>
-              <div class="col-lg-4 text-end my-auto">
-                <a href="https://demos.creative-tim.com/material-kit-pro/index#pricing-soft-ui" class="text-primary icon-move-right">Get the Code
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/assets/img/sections/hero/header-10.jpg" alt="header-10">
           </div>
         </div>
       </div>
@@ -806,28 +965,18 @@
     </div>
   </footer>
   <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-  {% include "includes/core_js.html" %}
-  {% include "includes/plugins_js.html" %}
-  {% include "includes/parallax_js.html" %}
-  
-  
-
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/js/plugins/prism.min.js"></script>
+  <script src="../../assets/js/plugins/highlight.min.js"></script>
+  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+  <script src="../../assets/js/plugins/parallax.min.js"></script>
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-  <script>
-    if (document.getElementById('typed')) {
-      var typed = new Typed("#typed", {
-        stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        backSpeed: 50,
-        backDelay: 200,
-        startDelay: 500,
-        loop: true
-      });
-    }
-  </script>
 </body>
 
-{% endblock %}
+</html>

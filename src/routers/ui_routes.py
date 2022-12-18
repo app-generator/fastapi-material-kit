@@ -53,7 +53,12 @@ def presentation(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request, "title" : "Presentation"})
 
 
-@router.get("/hero-sections", status_code=status.HTTP_200_OK)
-def presentation(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("page-sections/hero-sections.html", {"request" : request, "title" : "Presentation"})
+@router.get("/sections/page-sections/hero-sections", status_code=status.HTTP_200_OK)
+def hero_sections(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/hero-sections.html", {"request" : request, "title" : "Presentation"})
+
+
+@router.get("/sections/page-sections/features", status_code=status.HTTP_200_OK)
+def features(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/features.html", {"request" : request, "title" : "Presentation"})
 

@@ -74,7 +74,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                   Account
                 </h6>
-                <a href="{{url_for('sign-in')}}" class="dropdown-item border-radius-md">
+                <a href="{{url_for('sign_in')}}" class="dropdown-item border-radius-md">
                   <span>Sign In</span>
                 </a>
               </div>
@@ -94,7 +94,7 @@
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                   Account
                 </h6>
-                <a href="{{url_for('sign-in')}}" class="dropdown-item border-radius-md">
+                <a href="{{url_for('sign_in')}}" class="dropdown-item border-radius-md">
                   <span>Sign In</span>
                 </a>
               </div>
@@ -122,7 +122,7 @@
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/hero-sections.html">
                       Page Headers
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/features.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{url_for('features')}}">
                       Features
                     </a>
                   </div>
@@ -243,7 +243,7 @@
                   <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/hero-sections.html">
                     Page Headers
                   </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../sections/page-sections/features.html">
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{url_for('features')}}">
                     Features
                   </a>
                   <div class="d-flex mb-2 mt-3">
