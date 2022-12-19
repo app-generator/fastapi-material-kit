@@ -22,26 +22,26 @@ TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "../templates"))
 
 @router.get("/", status_code=status.HTTP_200_OK)
 def index(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/index.html", {"request" : request, "title" : "Home"})
+    return TEMPLATES.TemplateResponse("pages/index.html", {"request" : request})
 
 
 @router.get("/about-us", status_code=status.HTTP_200_OK)
 def about_us(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/about-us.html", {"request" : request, "title" : "About Us"})
+    return TEMPLATES.TemplateResponse("pages/about-us.html", {"request" : request})
 
 @router.get("/contact-us", status_code=status.HTTP_200_OK)
 def contact_us(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/contact-us.html", {"request" : request, "title" : "Contact Us"})
+    return TEMPLATES.TemplateResponse("pages/contact-us.html", {"request" : request})
 
 
 @router.get("/author", status_code=status.HTTP_200_OK)
 def author(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/author.html", {"request" : request, "title" : "Author"})
+    return TEMPLATES.TemplateResponse("pages/author.html", {"request" : request})
 
 
 @router.get("/sign-in", status_code=status.HTTP_200_OK)
 def sign_in(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/sign-in.html", {"request" : request, "title" : "Sign In"})
+    return TEMPLATES.TemplateResponse("pages/sign-in.html", {"request" : request})
 
 # @router.get("/template", status_code=status.HTTP_200_OK)
 # def template(request: Request, response_model=HTMLResponse):
@@ -50,20 +50,31 @@ def sign_in(request: Request, response_model=HTMLResponse):
 
 @router.get("/presentation", status_code=status.HTTP_200_OK)
 def presentation(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request, "title" : "Presentation"})
+    return TEMPLATES.TemplateResponse("pages/presentation.html", {"request" : request})
 
 
 @router.get("/sections/page-sections/hero-sections", status_code=status.HTTP_200_OK)
 def hero_sections(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("sections/page-sections/hero-sections.html", {"request" : request, "title" : "Presentation"})
+    return TEMPLATES.TemplateResponse("sections/page-sections/hero-sections.html", {"request" : request})
 
 
 @router.get("/sections/page-sections/features", status_code=status.HTTP_200_OK)
 def features(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("sections/page-sections/features.html", {"request" : request, "title" : "Presentation"})
+    return TEMPLATES.TemplateResponse("sections/page-sections/features.html", {"request" : request})
 
 
 @router.get("/sections/navigation/navbars", status_code=status.HTTP_200_OK)
-def features(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("sections/navigation/navbars.html", {"request" : request, "title" : "Presentation"})
+def navbars(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/navigation/navbars.html", {"request" : request})
 
+@router.get("/sections/navigation/nav-tabs", status_code=status.HTTP_200_OK)
+def navtabs(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/navigation/nav-tabs.html", {"request" : request})
+
+@router.get("/sections/navigation/pagination", status_code=status.HTTP_200_OK)
+def pagination(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/navigation/pagination.html", {"request" : request})
+
+@router.get("/sections/input-areas/inputs", status_code=status.HTTP_200_OK)
+def navtabs(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/input-areas/inputs.html", {"request" : request})
