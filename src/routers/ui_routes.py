@@ -76,5 +76,9 @@ def pagination(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("sections/navigation/pagination.html", {"request" : request})
 
 @router.get("/sections/input-areas/inputs", status_code=status.HTTP_200_OK)
-def navtabs(request: Request, response_model=HTMLResponse):
+def inputs(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("sections/input-areas/inputs.html", {"request" : request})
+
+@router.get("/sections/input-areas/forms", status_code=status.HTTP_200_OK)
+def forms(request: Request, response_model=HTMLResponse):
+    return TEMPLATES.TemplateResponse("sections/input-areas/forms.html", {"request" : request})
