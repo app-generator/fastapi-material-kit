@@ -3,19 +3,10 @@ from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
-# import http3
-
-
-# from src import app
-# import src.oauth2 as oauth2
-# from src.config import Settings
-# from src import models, schemas
-
 
 router = APIRouter(
     tags = ['User Interface']
 )
-
 
 BASE_PATH = Path(__file__).resolve().parent
 TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "../templates"))
@@ -83,13 +74,6 @@ def inputs(request: Request, response_model=HTMLResponse):
 def forms(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("sections/input-areas/forms.html", {"request" : request})
 
-
-
-
-
-
-
-
 @router.get("/sections/attention-catchers/alerts", status_code=status.HTTP_200_OK)
 def alerts(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("sections/attention-catchers/alerts.html", {"request" : request})
@@ -101,12 +85,6 @@ def modals(request: Request, response_model=HTMLResponse):
 @router.get("/sections/attention-catchers/tooltips_popovers", status_code=status.HTTP_200_OK)
 def tooltips_popovers(request: Request, response_model=HTMLResponse):
     return TEMPLATES.TemplateResponse("sections/attention-catchers/tooltips-popovers.html", {"request" : request})
-
-
-
-
-
-
 
 @router.get("/sections/elements/avatars", status_code=status.HTTP_200_OK)
 def avatars(request: Request, response_model=HTMLResponse):

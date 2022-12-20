@@ -2,7 +2,8 @@ from fastapi import APIRouter, HTTPException, status, Request
 from fastapi.responses import RedirectResponse
 from src import app
 from src.config import settings
-import http3
+
+import requests
 
 router = APIRouter(
     prefix = "/auth",
@@ -20,49 +21,55 @@ async def github_login(request: Request):
     if not settings.github_client_id:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing a Required Credential, github Client ID, check your environment variables")
 
-
-    # NEED TO CHECK THE DOCS ON HOW REDIRECT URI WORKS
     github_login_url = f'https://github.com/login/oauth/authorize?client_id={github_keys["client_id"]}'
     redirect = RedirectResponse(url=github_login_url)
     redirect.status_code = 302
     return redirect
 
+
 @router.get("/login")
 async def authorize_github(request: Request):
     authorization_code = request.query_params.get('code')
+    try:        
+        url = f'https://github.com/login/oauth/access_token?client_id={github_keys["client_id"]}&client_secret={github_keys["secret_key"]}&code={authorization_code}'
+        headers = {
+            'accept': 'application/json'
+        }
+        res = requests.post(url, headers=headers)
 
-    github_authorize_url = f'https://github.com/login/oauth/access_token?client_id={settings.github_client_id}&client_secret={settings.github_secret_key}&code={authorization_code}' 
-    get_user_url = "https://api.github.com/user"
-    try:
+        data = res.json()
 
-        # here is the main issue
-        # during a tsl call, i cannot start a request to.
-        # for stripe, this is done with their module.
-        # this is my attempt to do it manually        
-        http3client = http3.AsyncClient()
-        response = await http3client.post(github_authorize_url, authorization_code)
-
-        access_token = response['access_token']
+        access_token = data.get('access_token')
 
         redirect = RedirectResponse(url=app.ui_router.url_path_for('index'))
         redirect.status_code = 302
-        # redirect.set_cookie('github-Account', access_token)
-
+        redirect.set_cookie('github-Account', access_token)
         return redirect
     except Exception as e:
-        print (e)
-        print ('login error')
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Missing Authorization Code")
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization Code")
+
+@router.get("/user")
+async def github_user(request: Request) -> dict:
+    access_token = request.cookies.get('github-Account')
+
+    if  (not access_token):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization Code")
+
+    access_token = 'token ' + access_token
+    url = 'https://api.github.com/user'
+    headers = {"Authorization": access_token}
+    resp = requests.get(url=url, headers=headers)
+    userData = resp.json()
+    return userData
+
 
 @router.get("/logout")
 def deauthorize_github(request: Request):
     try:
-        print (request)
-        print (dir(request))
         access_key = request.cookies.get('github-Account')
 
         if (not access_key):
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="You are not logged in")
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="You are not logged in.")
 
         redirect = RedirectResponse(url=app.ui_router.url_path_for('index'))
         redirect.status_code = 302
@@ -70,6 +77,4 @@ def deauthorize_github(request: Request):
 
         return redirect
     except Exception as e:
-        print (e)
-        # request.cookies.update()
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization Code")
