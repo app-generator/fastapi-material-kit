@@ -8,8 +8,8 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 60*2 #2 hours
 
     github_secret_key: str = None
-    github_is_active: bool = False
     github_client_id: str = None
+    github_is_active: bool = False
 
     def __init__(self):
         super().__init__()

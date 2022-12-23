@@ -3,6 +3,8 @@ from fastapi.responses import RedirectResponse
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
+from src.config import settings
+
 
 router = APIRouter(
     tags = ['User Interface']
@@ -32,7 +34,8 @@ def author(request: Request, response_model=HTMLResponse):
 
 @router.get("/sign-in", status_code=status.HTTP_200_OK)
 def sign_in(request: Request, response_model=HTMLResponse):
-    return TEMPLATES.TemplateResponse("pages/sign-in.html", {"request" : request})
+
+    return TEMPLATES.TemplateResponse("pages/sign-in.html", {"request" : request, "settings" : settings})
 
 # @router.get("/template", status_code=status.HTTP_200_OK)
 # def template(request: Request, response_model=HTMLResponse):
