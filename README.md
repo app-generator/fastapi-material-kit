@@ -16,7 +16,7 @@
 | ❌ | **API** | Products & Sales (linked tables) |
 |     |         | GET Requests (public), `get/`, `get/id`  |
 |     |         | Mutating requests (Create, UPD, DEL) (reserved for authenticated users) |
-| ❌ | **Docker** | Simple Setup (local usage) |
+| ✅ | **Docker** | Simple Setup (local usage) |
 | ✅ | **OAuth** | `Github` OAuth Provider |
 | ❌ | **Unitary tests** | `minimal suite` |
 
