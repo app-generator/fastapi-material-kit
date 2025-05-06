@@ -1,6 +1,11 @@
-# FastAPI Material Kit
+# [FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) Material Kit
 
-> **DESIGN Repo**: https://github.com/creativetimofficial/material-kit
+Open-source [FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) styled with Material Kit Design - Actively supported by [App-Generator](https://app-generator.dev/).
+
+> 👉 For more [FastAPI Resources](https://app-generator.dev/docs/technologies/fastapi.html) please access:
+
+- [Getting Started with FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html)
+- [FastAPI Cheatsheet](https://app-generator.dev/docs/technologies/fastapi/cheatsheet.html)
 
 <br />
 
@@ -9,7 +14,7 @@
 | Status | Item | info | 
 | --- | --- | --- |
 | ✅ | **Up-to-date Dependencies** | - |
-| ✅ | **[Material Kit](https://www.creative-tim.com/product/material-kit?AFFILIATE=128200)** | (Free Version) by `Creative-Tim` |
+| ✅ | **[Material Kit](https://app-generator.dev/product/material-kit/)** | Designed by **[Creative-Tim(https://app-generator.dev/agency/creative-tim/)** |
 | ✅ | **UI Kit** | `Bootstrap 5`, `Dark-Mode` (persistent) |
 | ❌ | **Persistence** | `SQLite`, `MySql` |
 | ✅ | **Basic Authentication** | classic user/password |
@@ -27,13 +32,4 @@
 <br />
 
 ---
-**FastAPI Material Kit** - Open-source Starter provided by **[AppSeed](https://appseed.us/)**
-
-
-<!-- Building the App Manually -->
-
-1. create a virtual environment with `python -m venv venv`
-2. activate the virtual environment, likely `source venv/Scripts/active` 
-3. install the requirements `pip install -r requirements`
-4. uvicorn src.app:app
-
+[FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.html) Material Kit - Open-source eCommerce Starter provided by [App-Generator](https://app-generator.dev/).
