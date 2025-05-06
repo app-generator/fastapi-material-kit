@@ -14,7 +14,7 @@ Open-source [FastAPI](https://app-generator.dev/docs/technologies/fastapi/index.
 | Status | Item | info | 
 | --- | --- | --- |
 | ✅ | **Up-to-date Dependencies** | - |
-| ✅ | **[Material Kit](https://app-generator.dev/product/material-kit/)** | Designed by **[Creative-Tim(https://app-generator.dev/agency/creative-tim/)** |
+| ✅ | **[Material Kit](https://app-generator.dev/product/material-kit/)** | Designed by **[Creative-Tim](https://app-generator.dev/agency/creative-tim/)** |
 | ✅ | **UI Kit** | `Bootstrap 5`, `Dark-Mode` (persistent) |
 | ❌ | **Persistence** | `SQLite`, `MySql` |
 | ✅ | **Basic Authentication** | classic user/password |
